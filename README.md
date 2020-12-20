@@ -1,4 +1,4 @@
-# Lambda funtion answer to: What's my IP?
+# Lambda function to answer the question: What's my IP?
 
 When invoked via an AWS application level loadbalancer (ELB) the function will return the IP of the requesting client.
 
