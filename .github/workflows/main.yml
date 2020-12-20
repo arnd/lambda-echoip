@@ -26,6 +26,10 @@ jobs:
       - uses: actions/checkout@v2
       # Setup GO build env
       - uses: actions/setup-go@v2      
+      - name: Install dependencies
+        run: |
+          go get -u github.com/aws/aws-lambda-go/events
+          go get -u github.com/aws/aws-lambda-go/lambda
       - name: Build deployment package
         run: make build
       - name: Runs unit-tests
