@@ -22,7 +22,7 @@ make build
 ```
 3. Create function and note down the Function ARN (e.g. `arn:aws:lambda:eu-west-1:123456789012:function:lambda-echoip`):
 ```shell
-aws lambda create-function --function-name lambda-echoip --runtime go1 --handler lambda-echoip.handler --zip-file fileb://function.zip --role arn:aws:iam::123456789012:role/lambda-echoip`
+aws lambda create-function --function-name lambda-echoip --runtime go1 --handler main --zip-file fileb://function.zip --role arn:aws:iam::123456789012:role/lambda-echoip`
 ```
 4. Create ELB target group for the function, and note down the TargetGroupArn (e.g. `arn:aws:elasticloadbalancing:eu-west-1:123456789012:targetgroup/lambda-echoip/7e8a3b1bb81b9338"`)
 ```shell
